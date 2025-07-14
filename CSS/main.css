@@ -23,6 +23,7 @@
     --color-selection: #da5656;
     --color-form: #fff;
     --color-menu:#000;
+    --color:#fff;
 }
 
 :has(#dark-mode-toggle:checked) {
@@ -30,7 +31,6 @@
     --second-color: #fff;
     --third-color: #fff;
     --color: #fff;
-    /* --color-heading-2:#212529; */
     --fourth-color: #d58b23;
     --color-hover: #ee971d;
     --fifth-color: #9f9f9f;
@@ -52,7 +52,9 @@
 
 html{
     scroll-behavior: smooth;
+    scroll-padding-top: 50px;
 }
+
 body {
     margin: 0;
 }
@@ -680,7 +682,6 @@ div input {
     align-items: center;
     transform: translateY(110%);
     transition: transform 0.5s;
-    /* align-items: flex-start; */
 }
 
 #gallery .gallery-images .image:hover .layer {
@@ -694,7 +695,7 @@ div input {
 #gallery .gallery-images .image .layer .text-layer h3 {
     font-size: 24px;
     font-weight: 700;
-    color: var(--color-white);
+    color: var(--color);
 }
 
 #gallery .gallery-images .image .layer .text-layer {
