@@ -22,8 +22,8 @@
     --third-f-family: "Inter", sans-serif;
     --color-selection: #da5656;
     --color-form: #fff;
-    --color-menu:#000;
-    --color:#fff;
+    --color-menu: #000;
+    --color: #fff;
 }
 
 :has(#dark-mode-toggle:checked) {
@@ -46,11 +46,10 @@
     --third-f-family: "Inter", sans-serif;
     --color-selection: #da5656;
     --color-form: #171717;
-    --color-menu:#fff;
+    --color-menu: #fff;
 }
 
-
-html{
+html {
     scroll-behavior: smooth;
     scroll-padding-top: 50px;
 }
@@ -255,10 +254,6 @@ div input {
     display: block;
 }
 
-#navbar .menu input[type="checkbox"] {
-    display: none;
-}
-
 #navbar .mobile-menu-icon .icon-menu span {
     position: absolute;
     top: 0;
@@ -281,26 +276,64 @@ div input {
     top: 16px;
 }
 
-#navbar .mobile-menu-icon:hover span:nth-child(2) {
+/* #navbar .mobile-menu-icon:hover span:nth-child(2) {
     opacity: 0;
-}
+} */
 
-#navbar .mobile-menu-icon:hover span:first-child,
-#navbar .mobile-menu-icon:hover span:last-child {
+/* #navbar .mobile-menu-icon span:first-child,
+#navbar .mobile-menu-icon span:last-child {
     top: 8px;
+} */
+
+/* #navbar .mobile-menu-icon:hover span:first-child {
+    transform: rotate(45deg);
+} */
+
+/* #navbar .mobile-menu-icon .icon-menu span:last-child {
+    transform: rotate(-45deg);
+} */
+
+#navbar input[type="checkbox"]:checked ~ div ul {
+    transform: translateX(0);
 }
 
-#navbar .mobile-menu-icon:hover span:first-child {
+#navbar
+    input[type="checkbox"]:checked
+    + .mobile-menu-icon
+    .icon-menu
+    span:first-child {
     transform: rotate(45deg);
 }
 
-#navbar .mobile-menu-icon:hover span:last-child {
+#navbar
+    input[type="checkbox"]:checked
+    + .mobile-menu-icon
+    .icon-menu
+    span:last-child {
     transform: rotate(-45deg);
 }
 
-#navbar .menu input[type="checkbox"]:checked ~ ul {
-    transform: translateX(0);
+#navbar
+    input[type="checkbox"]:checked
+    + .mobile-menu-icon
+    .icon-menu
+    span:nth-child(2) {
+    opacity: 0;
 }
+
+#navbar
+    input[type="checkbox"]:checked
+    + .mobile-menu-icon
+    .icon-menu
+    span:first-child,
+#navbar
+    input[type="checkbox"]:checked
+    + .mobile-menu-icon
+    .icon-menu
+    span:last-child {
+    top: 8px;
+}
+
 /*=================*/
 
 /*----------switch dark mode / light mode-----------*/
@@ -618,13 +651,14 @@ div input {
 }
 
 #gallery .gallery-images {
+    --gap: 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    gap: 20px;
     padding: 10px 0;
     justify-content: flex-start;
     align-items: stretch;
+    gap: var(--gap);
 }
 
 #gallery .gallery-images .image {

@@ -144,7 +144,7 @@
 
     #gallery .gallery-images .image {
         /*media*/
-        width: calc((100% - 20px) / 3);
+        width: calc((100% - var(--gap)) / 3);
     }
 
     .gallery-images .image-1 {
