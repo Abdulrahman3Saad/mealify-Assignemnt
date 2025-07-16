@@ -54,6 +54,10 @@
     --color-menu: #fff;
 }
 
+:has(#dark-mode-toggle:checked) .chefs-cards .card .chefs-image::before {
+    background-image: url(../images/team-shape-dark.svg);
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 50px;
@@ -534,6 +538,7 @@ div input {
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s;
+    background-color: var(--color-white);
 }
 
 /*Hover Inner*/
