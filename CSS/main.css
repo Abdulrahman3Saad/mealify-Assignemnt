@@ -26,6 +26,11 @@
     --color: #fff;
 }
 
+::selection {
+    background-color: var(--color-selection);
+    color: var(--color-white);
+}
+
 :has(#dark-mode-toggle:checked) {
     --main-color: #7f7f90;
     --second-color: #fff;
@@ -44,7 +49,7 @@
     --main-f-family: "Amatic SC", sans-serif;
     --second-f-family: "Open Sans", sans-serif;
     --third-f-family: "Inter", sans-serif;
-    --color-selection: #da5656;
+    --color-selection: #926321;
     --color-form: #171717;
     --color-menu: #fff;
 }
@@ -56,11 +61,6 @@ html {
 
 body {
     margin: 0;
-}
-
-::selection {
-    background-color: var(--color-selection);
-    color: var(--color-white);
 }
 
 .container {
@@ -173,7 +173,7 @@ div input {
     flex-direction: column;
     position: absolute;
     padding-top: 30px;
-    transform: translateX(110%);
+    transform: translateX(130%);
     top: 0;
     right: 0;
     background-color: var(--color-white);
@@ -216,9 +216,6 @@ div input {
     width: 100%;
 }
 
-#navbar .menu .linkes li a:focus::after {
-    width: 100%;
-}
 
 #navbar .menu .linkes li a:focus {
     color: var(--third-color);
@@ -275,23 +272,6 @@ div input {
 #navbar .mobile-menu-icon .icon-menu span:last-child {
     top: 16px;
 }
-
-/* #navbar .mobile-menu-icon:hover span:nth-child(2) {
-    opacity: 0;
-} */
-
-/* #navbar .mobile-menu-icon span:first-child,
-#navbar .mobile-menu-icon span:last-child {
-    top: 8px;
-} */
-
-/* #navbar .mobile-menu-icon:hover span:first-child {
-    transform: rotate(45deg);
-} */
-
-/* #navbar .mobile-menu-icon .icon-menu span:last-child {
-    transform: rotate(-45deg);
-} */
 
 #navbar input[type="checkbox"]:checked ~ div ul {
     transform: translateX(0);
@@ -740,6 +720,7 @@ div input {
 /* --===========Start Section Contact==================-- */
 #contact {
     padding: 70px 0;
+    --gap: 15px;
     background-color: var(--color-section-whtie);
 }
 #contact .text-contact > span {
@@ -760,7 +741,7 @@ div input {
 #contact .contact-icon {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: var(--gap);
 }
 
 #contact .contact-icon .contact-details {
@@ -769,7 +750,7 @@ div input {
     align-items: center;
     padding: 20px;
     background-color: var(--color-9);
-    column-gap: 15px;
+    column-gap: var(--gap);
 }
 
 #contact .contact-icon .contact-details a {
@@ -811,7 +792,7 @@ div input {
 #contact .contact-form .user-info {
     display: flex;
     flex-direction: column;
-    row-gap: 15px;
+    row-gap: var(--gap);
 }
 
 #contact .contact-form textarea,
